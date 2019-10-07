@@ -1,31 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        if(isPalindrome(707))
-        {
-            System.out.println(707 + " is a palindrome");
-        }
-        else
-        {
-            System.out.println(707 + " is not a palindrome");
-        }
+        int[] candidates = new int[] {707, -1221, 11212};
 
-        if(isPalindrome(-1221))
-        {
-            System.out.println(-1221 + " is a palindrome");
-        }
-        else
-        {
-            System.out.println(-1221 + " is not a palindrome");
-        }
+        for (int candidate: candidates) {
 
-
-        if(isPalindrome(11212))
-        {
-            System.out.println(11212 + " is a palindrome");
-        }
-        else
-        {
-            System.out.println(11212 + " is not a palindrome");
+            if (isPalindrome(candidate)) {
+                System.out.println(candidate + " is a palindrome");
+            } else {
+                System.out.println(candidate + " is not a palindrome");
+            }
         }
     }
 
@@ -34,21 +17,17 @@ public class Main {
         int original = number;
         int reversed = 0;
         while(number != 0) {
-
-            System.out.println("Current multiplier");
             // Shift current reversed value one place value
             reversed *= 10;
 
             // Get next digit
             int digit = number % 10;
-            System.out.println("Current digit = " + digit);
+
             // Add
             reversed += digit;
-            System.out.println("Current reversed = " + reversed);
 
             // Get next number
             number /= 10;
-            System.out.println("Next number = " + number);
         }
 
         if(reversed == original)
