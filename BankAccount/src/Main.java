@@ -16,5 +16,15 @@ public class Main {
 
         bankAccount.withdraw(400);
         System.out.println("Balance = " + bankAccount.getBalance());
+
+        System.out.println();
+        System.out.println();
+        BankAccount another = new BankAccount();
+        System.out.println("Account number = " + another.getAccountNumber());
+        System.out.println("Balance = " + another.getBalance());
+        System.out.println("Customer name = " + another.getCustomerName());
+        System.out.println("Email = " + another.getCustomerEmail());
+        System.out.println("Phone = " + another.getCustomerPhoneNumber());
+
     }
 }

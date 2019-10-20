@@ -5,6 +5,10 @@ public class BankAccount {
     private String customerEmail;
     private String customerPhoneNumber;
 
+    public BankAccount() {
+        this(1,0d,"Default Name","Default Email","Default Phone");
+    }
+
     public BankAccount(int accountNumber, double initialBalance, String customerName, String customerEmail, String customerPhoneNumber) {
         this.setAccountNumber(accountNumber);
         this.setBalance(initialBalance);
