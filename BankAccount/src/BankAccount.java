@@ -9,12 +9,16 @@ public class BankAccount {
         this(1,0d,"Default Name","Default Email","Default Phone");
     }
 
+    public BankAccount(String customerName, String customerEmail, String customerPhoneNumber) {
+        this(999, 100, customerName, customerEmail, customerPhoneNumber);
+    }
+
     public BankAccount(int accountNumber, double initialBalance, String customerName, String customerEmail, String customerPhoneNumber) {
-        this.setAccountNumber(accountNumber);
-        this.setBalance(initialBalance);
-        this.setCustomerName(customerName);
-        this.setCustomerEmail(customerEmail);
-        this.setCustomerPhoneNumber(customerPhoneNumber);
+        this.accountNumber = accountNumber;
+        this.balance = initialBalance;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.customerPhoneNumber = customerPhoneNumber;
     }
 
     public int getAccountNumber() {
@@ -65,7 +69,7 @@ public class BankAccount {
     }
 
     public void withdraw(double amount) {
-        if(amount > this.balance) {
+        if(amount >= this.balance) {
             return;
         }
 

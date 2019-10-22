@@ -26,5 +26,13 @@ public class Main {
         System.out.println("Email = " + another.getCustomerEmail());
         System.out.println("Phone = " + another.getCustomerPhoneNumber());
 
+        System.out.println();
+        System.out.println();
+        BankAccount yetAnother = new BankAccount("jane doe", "jane.do@gmil.com", "555-1214");
+        System.out.println("Account number = " + yetAnother.getAccountNumber());
+        System.out.println("Balance = " + yetAnother.getBalance());
+        System.out.println("Customer name = " + yetAnother.getCustomerName());
+        System.out.println("Email = " + yetAnother.getCustomerEmail());
+        System.out.println("Phone = " + yetAnother.getCustomerPhoneNumber());
     }
 }
